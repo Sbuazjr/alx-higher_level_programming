@@ -1,23 +1,22 @@
 #!/usr/bin/python3
-"""Defines a base geometry class BaseGeometry."""
+"""Geomtrt module"""
 
 
 class BaseGeometry:
-    """Reprsent base geometry."""
-
+    """empty geomtry module"""
     def area(self):
-        """Not yet implemented."""
+        """raises error"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate a parameter as an integer.
+        """validates value
 
         Args:
-            name (str): The name of the parameter.
-            value (int): The parameter to validate.
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
+            name(str)= the name of paramter
+            value(int) = the parameter to validate"
+        Return:
+               TypeError = if the value is not int
+                ValueError = if the value is less than zero
         """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
